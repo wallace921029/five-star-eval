@@ -1,2 +1,7 @@
 # five-star-eval
-Five star evaluation component.
+
+```html
+<five-star-eval
+  :score="4.3"
+  :show-score="false"/>
+```
