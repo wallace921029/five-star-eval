@@ -57,7 +57,7 @@ export default {
       if (this.score > 1.75 && this.score <= 2.25) this.style.backgroundPositionY = `-${lineHeight * 4}px`
       if (this.score > 2.25 && this.score <= 2.75) this.style.backgroundPositionY = `-${lineHeight * 5}px`
       if (this.score > 2.75 && this.score <= 3.25) this.style.backgroundPositionY = `-${lineHeight * 6}px`
-      if (this.score > 2.25 && this.score <= 3.75) this.style.backgroundPositionY = `-${lineHeight * 7}px`
+      if (this.score > 3.25 && this.score <= 3.75) this.style.backgroundPositionY = `-${lineHeight * 7}px`
       if (this.score > 3.75 && this.score <= 4.25) this.style.backgroundPositionY = `-${lineHeight * 8}px`
       if (this.score > 4.25 && this.score <= 4.75) this.style.backgroundPositionY = `-${lineHeight * 9}px`
       if (this.score > 4.75 && this.score <= 5) this.style.backgroundPositionY = `-${lineHeight * 10}px`
