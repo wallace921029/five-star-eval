@@ -1,10 +1,13 @@
 {
   "name": "five-star-eval",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Wallace Wang",
   "description": "Five star evaluation component.",
   "main": "lib/five-star-eval.umd.min.js",
-  "keywords": ["star", "evaluation"],
+  "keywords": [
+    "star",
+    "evaluation"
+  ],
   "license": "MIT",
   "private": false,
   "repository": {
