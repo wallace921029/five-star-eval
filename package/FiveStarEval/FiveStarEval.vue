@@ -42,11 +42,11 @@ export default {
   },
   methods: {
     initialize() {
-      // 图片初始宽度 245
+      // 图片初始宽度 197
       // 图片初始高度 364
       // 图片中 11 行星星
       const width = this.$refs.fiveStarEvalStarBox.clientWidth
-      const pictureHeight = width * 364 / 245
+      const pictureHeight = width * 364 / 197
       const lineHeight = pictureHeight / 11
       this.style.height = lineHeight + 'px'
 
