@@ -2,14 +2,19 @@
 
 <template>
   <div class="five-star-eval">
-    <div
-        ref="fiveStarEvalStarBox"
-        class="five-star-eval__star-box"
-        :style="style">
+    <div class="star-box">
+      <div
+          class="star-box__bg-1"
+          :style="style1"/>
+      <div
+          class="star-box__bg-2"
+          :style="style2"/>
+      <div class="star"/>
     </div>
     <div
         v-if="showScore"
-        class="five-star-eval__score-box">
+        class="score-box"
+        :style="style3">
       <span>{{ score }}</span>
     </div>
   </div>
@@ -25,42 +30,52 @@ export default {
       type: Number,
       default: 0
     },
+    // 五角星未激活颜色
+    inactiveColor: {
+      type: String,
+      default: '#d5d5d5'
+    },
+    // 五角星颜色
+    activeColor: {
+      type: String,
+      default: 'orange'
+    },
     // 展示分数
     showScore: {
       type: Boolean,
-      default: true
+      default: false
+    },
+    // 分数颜色
+    scoreColor: {
+      type: String,
+      default: '#666'
     }
   },
   data() {
     return {
-      style: {
-        // 星星高度
-        height: '0px',
-        backgroundPositionY: '0px'
+      style1: {
+        backgroundColor: '#d5d5d5'
+      },
+      style2: {
+        width: '0px',
+        backgroundColor: 'orange'
+      },
+      style3: {
+        color: '#666'
       }
     }
   },
   methods: {
     initialize() {
-      // 图片初始宽度 197
-      // 图片初始高度 364
-      // 图片中 11 行星星
-      const width = this.$refs.fiveStarEvalStarBox.clientWidth
-      const pictureHeight = width * 364 / 197
-      const lineHeight = pictureHeight / 11
-      this.style.height = lineHeight + 'px'
+      // style1
+      this.style1.backgroundColor = this.inactiveColor
 
-      if (this.score <= 0.25) this.style.backgroundPositionY = '0px'
-      if (this.score > 0.25 && this.score <= 0.75) this.style.backgroundPositionY = `-${lineHeight}px`
-      if (this.score > 0.75 && this.score <= 1.25) this.style.backgroundPositionY = `-${lineHeight * 2}px`
-      if (this.score > 1.25 && this.score <= 1.75) this.style.backgroundPositionY = `-${lineHeight * 3}px`
-      if (this.score > 1.75 && this.score <= 2.25) this.style.backgroundPositionY = `-${lineHeight * 4}px`
-      if (this.score > 2.25 && this.score <= 2.75) this.style.backgroundPositionY = `-${lineHeight * 5}px`
-      if (this.score > 2.75 && this.score <= 3.25) this.style.backgroundPositionY = `-${lineHeight * 6}px`
-      if (this.score > 3.25 && this.score <= 3.75) this.style.backgroundPositionY = `-${lineHeight * 7}px`
-      if (this.score > 3.75 && this.score <= 4.25) this.style.backgroundPositionY = `-${lineHeight * 8}px`
-      if (this.score > 4.25 && this.score <= 4.75) this.style.backgroundPositionY = `-${lineHeight * 9}px`
-      if (this.score > 4.75 && this.score <= 5) this.style.backgroundPositionY = `-${lineHeight * 10}px`
+      // style2
+      this.style2.width = (this.score / 5 * 84) + 'px'
+      this.style2.backgroundColor = this.activeColor
+
+      // style3
+      this.style3.color = this.scoreColor
     }
   },
   mounted() {

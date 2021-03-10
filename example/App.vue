@@ -1,18 +1,12 @@
-<style lang="scss" scoped>
-.star-box {
-  width: 100px;
-  overflow: hidden;
-}
-</style>
+<style lang="scss" scoped/>
 
 <template>
   <div id="app">
-    <div class="star-box">
-      <five-star-eval
-          v-for="(score, index) in scores"
-          :key="index"
-          :score="score"/>
-    </div>
+    <five-star-eval
+        v-for="(score, index) in scores"
+        :key="index"
+        :score="score"
+        show-score/>
   </div>
 </template>
 

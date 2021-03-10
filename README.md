@@ -1,16 +1,21 @@
 # five-star-eval
 
-[![yx59u8.png](https://s3.ax1x.com/2021/02/26/yx59u8.png)](https://imgtu.com/i/yx59u8)
+This component is only used to present score by five stars.
+
+## PRESENTATION
+
+[![6J6lmn.png](https://s3.ax1x.com/2021/03/10/6J6lmn.png)](https://imgtu.com/i/6J6lmn)
+
+## HOW TO USE
 
 ```html
-<!-- if your don't want to show score text, set 'show-score' as false -->
-<!-- :show-score="false" -->
-<div style="width: 80px;">
-  <five-star-eval
-      v-for="(score, index) in scores"
-      :key="index"
-      :score="score"/>
-</div>
+<!-- if your don't want to show score text, set 'show-score' as true: -->
+<!-- :show-score="true" or show-score -->
+<five-star-eval
+    v-for="(score, index) in scores"
+    :key="index"
+    :score="score"
+    show-score/>
 ```
 
 ```js
@@ -28,3 +33,13 @@ export default {
   }
 }
 ```
+
+## PROPS
+
+| PROP NAME | TYPE | OPTIONS | DEFAULT | DESC |
+| --- | --- | --- | --- | --- |
+| score | Number | - | - | - |
+| inactiveColor | String | - | #d5d5d5 | inactive star color |
+| activeColor | String | - | orange | active star color |
+| showScore | Boolean | - | false | show score text |
+| scoreColor | String | - | #666666 | score text color |
