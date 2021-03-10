@@ -1,6 +1,6 @@
 {
   "name": "five-star-eval",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Wallace Wang",
   "description": "Five star evaluation component.",
   "main": "lib/five-star-eval.umd.min.js",
