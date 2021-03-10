@@ -9,7 +9,7 @@ This component is only used to present score by five stars.
 ## HOW TO USE
 
 ```html
-<!-- if your don't want to show score text, set 'show-score' as true: -->
+<!-- if your want to show score text, set 'show-score' as true: -->
 <!-- :show-score="true" or show-score -->
 <five-star-eval
     v-for="(score, index) in scores"
